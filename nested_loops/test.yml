@@ -1,0 +1,26 @@
+config:
+  target: 'http://localhost:3000'
+  http:
+    pool: 20 # All HTTP requests from all virtual users will be sent over the same 20 connections
+    timeout: 10
+  phases:
+    - duration: 1
+      arrivalRate: 1
+  processor: './processor.js'
+scenarios:
+  - flow:
+    - get:
+        url: '/playlist'
+        afterResponse: 'parseMasterManifest'
+    - loop:
+      - get:
+          url: '/variants/{{ $loopElement }}'
+          afterResponse: 'parseVariantManifest'
+      - loop:
+        - get:
+            url: '/segments/{{ $loopElement }}'
+            match:
+              json: "$.body"
+              value: "retrieved!"
+        over: segments
+      over: variantplaylists

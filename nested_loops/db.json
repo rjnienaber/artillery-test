@@ -1,0 +1,11 @@
+{
+  "playlist": [
+    { "id": 1, "variants": ["67a25a06-e19b-4126-b363-5382d2079493"] }
+  ],
+  "variants": [
+    { "id": "67a25a06-e19b-4126-b363-5382d2079493", "segments": ["b5336807-b09c-482e-a5e3-da9b64420d7a"] }
+  ],
+  "segments": [
+    { "id": "b5336807-b09c-482e-a5e3-da9b64420d7a", "body": "retrieved!" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "fake_rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "nested_fake": "./node_modules/.bin/json-server --watch ./nested_loops/db.json",
+    "nested_test": "./node_modules/.bin/artillery run ./nested_loops/test.yml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.0-12",
+    "json-server": "^0.12.1"
+  }
+}

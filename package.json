@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "nested_fake": "./node_modules/.bin/json-server --watch ./nested_loops/db.json",
-    "nested_test": "./node_modules/.bin/artillery run ./nested_loops/test.yml"
+    "nested_test": "./node_modules/.bin/artillery run ./nested_loops/test.yml",
+    "escape_fake": "./node_modules/.bin/json-server --watch ./escaped_json/db.json",
+    "escape_test": "./node_modules/.bin/artillery run ./escaped_json/test.yml"
   },
   "author": "",
   "license": "ISC",
